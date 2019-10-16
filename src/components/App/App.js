@@ -13,11 +13,6 @@ import { Footer } from "../Footer/Footer"
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Patryk Stanek</h1>
-        <h2>Junior Front End Developer</h2>
-      </header>
-      <div>
         <Header />
         <About />
         <Skills />
@@ -25,7 +20,6 @@ function App() {
         <Projects />
         <Contact />
         <Footer />
-      </div>
     </div>
   );
 }

@@ -1,1 +1,13 @@
 @import "../../styles.scss";
+
+.header {
+    @include flex-col-center;
+    height: 50vh;
+    background-color: $color-dark;
+
+    & h1,
+    & h2 {
+        color: $color-light;
+        font-weight: 100;
+    }
+}
