@@ -1,4 +1,5 @@
 //This files connect all scss files from assets folder;
 //It's main purpose is to being imported to other scss files to access variables, mixins etc;
 
-@import "assets/styles/breakpoints"
+@import "assets/styles/breakpoints";
+@import "assets/styles/colors";
