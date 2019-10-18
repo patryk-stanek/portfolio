@@ -1,13 +1,43 @@
 @import "../../styles.scss";
 
-.header {
-    @include flex-col-center;
-    height: 50vh;
-    background-color: $color-dark;
 
-    & h1,
-    & h2 {
-        color: $color-light;
+.header {
+    height: 105vh;
+    background-image: linear-gradient(to bottom right, rgba($color-dark, 1), rgba($color-dark, .75)), url("../../assets/images/hero.png");
+    // background-size: cover;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 5vw)
+    );
+    animation: Gradient 45s ease-in-out infinite;
+
+    &__container {
+        @include container;
+        @include flex-col-justify;
+        height: 100%;
+        position: relative;
+    }
+
+    &__box {
+        color: $color-white;
+        position: absolute;
+    }
+
+    &__title {
+        font-size: 80px;
+        margin-top: -100px;
+        font-weight: 100;
+    }
+
+    &__color {
+        color: $color-orange;
+    }
+
+    &__text {
+        font-size: 45px;
+        text-transform: uppercase;
         font-weight: 100;
     }
 }

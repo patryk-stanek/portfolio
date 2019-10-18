@@ -1,0 +1,32 @@
+@import "../../styles.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+
+.menubar {
+    display: none;
+    
+    z-index: 1000;
+    padding: 50px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border: 1px solid red;
+
+    &__container {
+        @include container;
+        width: 1140px;
+        border: 1px solid green;
+    }
+
+    &__logo {
+        font-family: 'Abril Fatface';
+        font-size: 30px;
+        text-align: center;
+        display: block;
+        width: 75px;
+        height: 75px;
+        line-height: 75px;
+        color: $color-black;
+        background-color: $color-white;
+    }
+}

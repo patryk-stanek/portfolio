@@ -2,6 +2,14 @@
     transition: all .1s ease-out;
 }
 
+@mixin container {
+    width: 100%;
+    height: 100%;
+    max-width: 1140px;
+    // max-width: 1000px;
+    margin: 0 auto;
+}
+
 //-------------------------------------------PAGE
 
 @mixin page-layout {
