@@ -6,8 +6,14 @@ export class Menubar extends React.Component {
     render() {
         return (
             <div className="menubar">
-                <div className="menubar__container">
-                    <span className="menubar__logo">PS</span>
+                <span className="menubar__logo">PS</span>
+                <div className="menubar__controls">
+                    <span className="menubar__language">
+                        EN / PL
+                    </span>
+                    <span className="menubar__toggle">
+                        MENU
+                    </span>
                 </div>
             </div>
         )

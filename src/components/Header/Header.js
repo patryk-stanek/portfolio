@@ -7,7 +7,7 @@ export class Header extends React.Component {
         super(props)
 
         this.state = {
-            offset: 0
+            offset: 0,
         }
     }
 
@@ -35,7 +35,7 @@ export class Header extends React.Component {
                     <div 
                         className="header__box"
                     >
-                        <h1 className="header__title">Hello, I'm <span className="header__color">Patryk Stanek</span></h1>
+                        <h1 className="header__title" >Hello, I'm <span className="header__color">Patryk Stanek</span></h1>
                         <span className="header__text">I'm Front End Developer based in <span className="header__color">Wroclaw</span></span>
                     </div>
                 </div>

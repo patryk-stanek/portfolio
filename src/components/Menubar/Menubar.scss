@@ -3,20 +3,15 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
 
 .menubar {
-    display: none;
-    
     z-index: 1000;
     padding: 50px 0;
     position: fixed;
-    top: 0;
-    width: 100%;
-    border: 1px solid red;
-
-    &__container {
-        @include container;
-        width: 1140px;
-        border: 1px solid green;
-    }
+    top: 2.5vw;
+    right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 100;
 
     &__logo {
         font-family: 'Abril Fatface';
@@ -28,5 +23,32 @@
         line-height: 75px;
         color: $color-black;
         background-color: $color-white;
+    }
+
+    &__controls {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $color-white;
+        text-align: center;
+        font-size: 22px;
+        word-spacing: 2px;
+    }
+
+    &__language {
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            background-color: $color-white;
+            width: 73px;
+            margin: 30px auto 30px;
+        }
+    }
+
+    &__toggle {
+
     }
 }
