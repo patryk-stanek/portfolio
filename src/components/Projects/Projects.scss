@@ -1,1 +1,169 @@
 @import "../../styles.scss";
+
+.projects {
+    height: 100vh;
+
+    &__container {
+        @include container;
+        margin-top: 50px;
+    }
+
+    &__description {
+        font-family: $font-raleway;
+        font-size: 25px;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    &__heading {
+        font-family: $font-raleway;
+        font-size: 50px;
+        font-weight: 100;
+        text-align: center;
+    }
+
+    &__box {
+
+    }
+
+    &__menu {
+        @include flex-row;
+        list-style: none;
+        text-transform: uppercase;
+        justify-content: center;
+        margin: 40px 0;
+    }
+
+    &__item {
+        cursor: pointer;
+
+        &:first-child {
+            font-weight: 500;
+        }
+
+        &:not(:last-child) {
+
+            &::after {
+                content: "/";
+                display: inline;
+                margin: 0 10px;
+                font-weight: 100;
+                cursor: default;
+            }
+        }
+    }
+
+    &__portfolio {
+        width: 100%;
+        height: 300px;
+    }
+
+    &__slide {
+        float: left;
+        position: relative;
+        perspective: 1500px;
+        height: 300px;
+        width: calc(100% / 3);
+    }
+
+    &__card {
+        transition: all .8s;
+        height: 300px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        overflow: hidden;
+        padding: 10px;
+
+        &--front {
+            z-index: 200;
+            transform: rotateY(0);
+        }
+
+        &--back {
+            z-index: 100;
+            transform: rotateY(180deg);
+        }
+    }
+
+    &__slide:hover &__card--front {
+        transform: rotateY(-180deg);
+    }
+
+    &__slide:hover &__card--back {
+        transform: rotateY(0)
+    }
+
+    &__content {
+        @include box-shadow;
+        height: 280px;
+
+        &--front {
+            position: relative;
+        }
+
+        &--back {
+            @include flex-col-center;
+            color: $color-white;
+
+            &-app {
+                background-image: linear-gradient(to right bottom, $color-red, $color-red-2);
+            }
+
+            &-web {
+                background-image: linear-gradient(to right bottom, $color-orange, $color-orange-2)
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__title {
+        background-image: linear-gradient(to bottom right, rgba($color-dark, .5), rgba($color-dark, .75));
+        color: $color-white;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        font-family: $font-raleway;
+        padding: 25px;
+        text-align: center;
+        font-weight: 300;
+        font-size: 25px;
+    }
+
+    &__type {
+        font-family: $font-raleway;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        font-size: 25px;
+    }
+
+    &__button {
+        @include transition;
+        @include box-shadow;
+        border: 2px solid $color-dark;
+        background-color: $color-dark;
+        color: $color-white;
+        padding: 10px 20px;
+        font-size: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+        width: 150px;
+        font-weight: 700;
+        margin-top: -2px;
+        font-family: $font-quicksand;
+
+        &:hover,
+        &:active {
+            background-color: $color-orange;
+            border: 2px solid $color-orange;
+        }
+    }
+}

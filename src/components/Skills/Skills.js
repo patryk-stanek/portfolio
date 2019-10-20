@@ -9,6 +9,9 @@ export class Skills extends React.Component {render() {
                     className="skills__wrap" 
                 >
                     <div className="skills__container">
+                        <span className="skills__description">
+                            Services
+                        </span>
                         <h2 className="skills__heading">
                             What I can do
                         </h2>
