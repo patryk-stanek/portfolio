@@ -1,5 +1,36 @@
 @import "../../styles.scss";
 
 .footer {
-    height: 100vh;
+    @include clip-up;
+    height: 70vh;
+    margin-top: -150px;
+
+    &__background-image {
+        background-image: linear-gradient(to bottom right, rgba($color-dark, .5), rgba($color-dark, .75)), url("../../assets/images/hero-2.jpg");
+        background-size: cover;
+        height: 70vh;
+        position: relative;
+    }
+
+    &__background-content {
+        @include clip-up;
+        padding-top: 150px;
+        position: absolute;
+        width: 100%;
+        background-image: linear-gradient(to bottom right, rgba($color-dark-2, .9), rgba($color-dark-2, .8));
+        height: 25vh;
+        bottom: 0;
+    }
+
+    &__container {
+        @include container;
+        text-align: center;
+    }
+
+    &__text {
+        font-family: $font-raleway;
+        color: white;
+        font-size: 20px;
+        font-weight: 100;
+    }
 }

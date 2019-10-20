@@ -30,6 +30,15 @@
     );
 }
 
+@mixin clip-up {
+    clip-path: polygon(
+      0 0,
+      100% calc(0% + 150px),
+      100% 100%,
+      0 100%
+    );
+}
+
 @mixin clip-down-up {
     clip-path: polygon(
       0 0,
