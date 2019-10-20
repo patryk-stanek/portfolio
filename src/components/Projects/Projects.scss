@@ -1,7 +1,8 @@
 @import "../../styles.scss";
 
 .projects {
-    height: 100vh;
+    // height: 100vh;
+    margin-bottom: 150px;
 
     &__container {
         @include container;
