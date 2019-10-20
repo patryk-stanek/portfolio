@@ -2,10 +2,13 @@
 
 .about {
     @include section-padding;
+    margin-top: -100px;
+    background-color: rgba($color-light-2, .5);
 
     &__container {
         @include container;
         @include flex-row;
+        padding-top: 100px;
     }
 
     &__box {
@@ -14,17 +17,6 @@
             position: relative;
             margin-right: 75px;
             margin-bottom: -5px;
-
-            &::before {
-                content: "";
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                background-color: $color-orange;
-                top: -10%;
-                left: -15%;
-                z-index: -1;
-            }
         }
 
         &--text {
@@ -34,7 +26,7 @@
     &__img {
         width: 100%;
         z-index: 10;
-        box-shadow: 0 0 85px 0 rgba($color-black, .15);
+        @include box-shadow;
     }
 
     &__content {
@@ -71,12 +63,20 @@
         text-transform: uppercase;
         cursor: pointer;
         width: 200px;
+        font-weight: 700;
         margin-top: -2px;
+        @include box-shadow;
+        font-family: $font-quicksand;
 
         &:hover,
         &:active {
-            background-color: $color-white;
-            color: $color-dark;
+            background-color: $color-orange;
+            border: 2px solid $color-orange;
+            // color: $color-dark;
+        }
+
+        &:active {
+            @include box-shadow-low;
         }
 
     }

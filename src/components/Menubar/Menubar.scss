@@ -23,6 +23,7 @@
         line-height: 75px;
         color: $color-black;
         background-color: $color-white;
+        @include box-shadow;
     }
 
     &__controls {

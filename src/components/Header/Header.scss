@@ -2,7 +2,7 @@
 
 
 .header {
-    height: 105vh;
+    height: 100vh;
     background-image: linear-gradient(to bottom right, rgba($color-dark, 1), rgba($color-dark, .75)), url("../../assets/images/hero.png");
     // background-size: cover;
     clip-path: polygon(
@@ -12,6 +12,7 @@
       0 calc(100% - 5vw)
     );
     animation: Gradient 45s ease-in-out infinite;
+    z-index: 20;
 
     &__container {
         @include container;

@@ -11,6 +11,8 @@ import { Projects } from "../Projects/Projects";
 import { Contact } from "../Contact/Contact";
 import { Footer } from "../Footer/Footer"
 
+import "./App.scss";
+
 function App() {
   return (
     <div className="App">
