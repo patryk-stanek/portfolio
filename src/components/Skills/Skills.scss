@@ -1,1 +1,71 @@
 @import "../../styles.scss";
+
+.skills {
+    @include clip-down-up;
+    filter: drop-shadow(0px 0px 3px rgba(0,0,0,1));
+    height: 106vh;
+    padding-top: 5px;
+    margin-top: -150px;
+
+    &__wrap {
+        @include clip-down-up;
+        height: 105vh;
+        background-image: linear-gradient(to bottom right, rgba($color-orange, .8), rgba($color-red, .75)), url("../../assets/images/hero-4.jpg");
+        background-size: cover;
+    }
+
+    &__container {
+        @include flex-col-center;
+        padding: 200px;
+    }
+
+    &__heading {
+        font-family: $font-raleway;
+        font-size: 50px;
+        font-weight: 100;
+        color: $color-white;
+    }
+
+    &__box {
+        @include flex-row;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    &__slide {
+        @include box-shadow;
+        text-align: center;
+        background-color: rgba($color-light-2, .9);
+        padding: 50px 25px;
+        margin: 25px;
+    }
+
+    &__icon {
+        @include transition;
+        display: inline-block;
+        font-size: 75px;
+        background-image: linear-gradient(to right, $color-orange, $color-red);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin: 25px 0 50px;
+
+        &:hover,
+        &:active {
+            box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+            border: 1px solid transparent;
+        }
+    }
+
+    &__title {
+        font-family: $font-raleway;
+        color: $color-dark;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    &__text {
+        color: $color-dark;
+        padding: 0 25px;
+    }
+}

@@ -8,16 +8,16 @@ export class About extends React.Component {
         return (
             <section className="about" id="section-about">
                 <div className="about__container">
-                    <div className="about__box--image">
+                    <div className="about__box--picture">
                         <img 
                             className="about__img"
                             src={imageUrl}
-                            alt="Portrait Photo"
+                            alt="Portrait"
                         />
                     </div>
                     <div className="about__box--text">
                         <div className="about__content">
-                            <h2 className="about__header">
+                            <h2 className="about__heading">
                                 About me
                             </h2>
                             <span className="about__span">

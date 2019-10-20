@@ -2,24 +2,23 @@
 
 .about {
     @include section-padding;
-    margin-top: -100px;
+    margin-top: -200px;
     background-color: rgba($color-light-2, .5);
+    // background-color: rgba($color-light-2, 1);
 
     &__container {
         @include container;
         @include flex-row;
-        padding-top: 100px;
+        padding-top: 200px;
+        padding-bottom: 200px;
     }
 
     &__box {
 
-        &--image {
+        &--picture {
             position: relative;
             margin-right: 75px;
             margin-bottom: -5px;
-        }
-
-        &--text {
         }
     }
 
@@ -31,13 +30,13 @@
 
     &__content {
         font-family: $font-raleway;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
     }
 
-    &__header {
+    &__heading {
         font-size: 50px;
         font-weight: 100;
         line-height: 40px;
