@@ -4,7 +4,7 @@ import "./Skills.scss"
 
 export class Skills extends React.Component {render() {
         return (
-            <section className="skills">
+            <section className="skills" id="section-services">
                 <div 
                     className="skills__wrap" 
                 >

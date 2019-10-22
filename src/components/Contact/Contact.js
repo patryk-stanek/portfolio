@@ -5,7 +5,7 @@ import "./Contact.scss"
 export class Contact extends React.Component {
     render() {
         return (
-            <section className="contact">
+            <section className="contact" id="section-contact">
                 <div className="contact__container">
                     <h3 className="contact__description">
                         Contact

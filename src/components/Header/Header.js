@@ -27,7 +27,7 @@ export class Header extends React.Component {
 
     render() {
         return (
-            <header className="header">
+            <header className="header" id="home">
                 <div 
                     className="header__background" 
                     style={{backgroundPositionY: this.state.offset / 2}}

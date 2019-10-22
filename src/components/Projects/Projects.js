@@ -9,7 +9,7 @@ export class Projects extends React.Component {
         const imageUrlC = `../../images/portfolio3.jpg`;
 
         return (
-            <section className="projects">
+            <section className="projects" id="section-portfolio">
                 <div className="projects__container">
                     <h3 className="projects__description">
                         Portfolio

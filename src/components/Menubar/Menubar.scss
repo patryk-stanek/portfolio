@@ -1,20 +1,22 @@
 @import "../../styles.scss";
 
-@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
-
 .menubar {
     z-index: 1000;
-    padding: 50px 0;
+    // padding: 50px 0;
     position: fixed;
-    top: 2.5vw;
+    top: 5vw;
     right: 5vw;
+    // top: 36px;
+    // right: 36px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-weight: 100;
+    // background-color: $color-orange;
+    padding: 5px;
 
     &__logo {
-        font-family: 'Abril Fatface';
+        font-family: $font-logo;
         font-size: 30px;
         text-align: center;
         display: block;
@@ -22,7 +24,8 @@
         height: 75px;
         line-height: 75px;
         color: $color-black;
-        background-color: $color-white;
+        background-color: rgba($color-white, .9);
+        margin: 0 auto;
         @include box-shadow;
     }
 
@@ -39,17 +42,98 @@
 
     &__language {
 
+    }
+
+    &__navigation {
+
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        height: 75px;
+        width: 75px;
+        cursor: pointer;
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 35px;
+        line-height: 5px;
+
+        &,
+        &::before,
         &::after {
-            content: "";
-            display: block;
-            height: 1px;
+            width: 30px;
+            height: 2px;
             background-color: $color-white;
-            width: 73px;
-            margin: 30px auto 30px;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            @include transition;
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: -8px;
+        }
+
+        &::after {
+            top: 8px;
         }
     }
 
-    &__toggle {
+    &__button:hover &__icon::before { top: -10px }
+    &__button:hover &__icon::after { top: 10px; }
 
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    &__checkbox:checked ~ &__list {
+        opacity: 1;
+        height: 100%;
+    }
+
+    &__list {
+        @include transition;
+        list-style: none;
+        opacity: 0;
+        height: 0;
+        margin-top: 15px;
+    }
+
+    &__item {
+        padding: 5px 0;
+
+    }
+
+    &__link:link,
+    &__link:visited {
+        @include transition;
+        text-decoration: none;
+        color: $color-white;
+        border-bottom: 1px solid transparent;
+
+        &:hover,
+        &:active {
+            border-bottom: 1px solid $color-white;
+        }
     }
 }
