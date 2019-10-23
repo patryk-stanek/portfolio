@@ -2,7 +2,8 @@ import React from "react";
 
 import "./Skills.scss"
 
-export class Skills extends React.Component {render() {
+export class Skills extends React.Component {
+    render() {
         return (
             <section className="skills" id="section-services">
                 <div 
@@ -17,7 +18,7 @@ export class Skills extends React.Component {render() {
                         </h2>
                         <div className="skills__box">
                             <div className="skills__slide">
-                                <i class="skills__icon lnr lnr-laptop"></i>
+                                <i className="skills__icon lnr lnr-laptop"></i>
                                 <h3 className="skills__title">
                                     Web Development
                                 </h3>
@@ -26,7 +27,7 @@ export class Skills extends React.Component {render() {
                                 </span>
                             </div>
                             <div className="skills__slide">
-                                <i class="skills__icon lnr lnr-smartphone"></i>
+                                <i className="skills__icon lnr lnr-smartphone"></i>
                                 <h3 className="skills__title">
                                     Single Page Application
                                 </h3>
@@ -35,7 +36,7 @@ export class Skills extends React.Component {render() {
                                 </span>
                             </div>
                             <div className="skills__slide">
-                                <i class="skills__icon lnr lnr-laptop-phone"></i>
+                                <i className="skills__icon lnr lnr-laptop-phone"></i>
                                 <h3 className="skills__title">
                                     Responsive Design
                                 </h3>
