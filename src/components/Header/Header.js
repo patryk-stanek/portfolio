@@ -2,6 +2,8 @@ import React from "react";
 
 import "./Header.scss"
 
+import HeaderComponent from "./Header.component";
+
 export class Header extends React.Component {
     constructor(props) {
         super(props)
@@ -37,8 +39,7 @@ export class Header extends React.Component {
                         <div 
                             className="header__box"
                         >
-                            <h1 className="header__title" >Hello, I'm <span className="header__color">Patryk Stanek</span></h1>
-                            <span className="header__text">I'm Front End Developer based in <span className="header__color">Wroclaw</span></span>
+                            <HeaderComponent />
                         </div>
                     </div>
                 </div>

@@ -12,28 +12,19 @@ import { Footer } from "../Footer/Footer"
 
 import "./App.scss";
 
-import "../../i18n";
-import Hello from "../../dummy/Hello";
-import ThankYou from "../../dummy/ThankYou";
-import LanguageSelector from "../../dummy/i18n.changeLanguage";
 
 function App() {
   return (
     <div className="App">
-        <div>
-          <Suspense fallback={null}>
-            <LanguageSelector />
-            <Hello />
-            <ThankYou />
-          </Suspense>
-        </div>
-        <Menubar />
-        <Header />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
+        <Suspense fallback={null}>
+          <Menubar />
+          <Header />
+          <About />
+          <Skills />
+          <Projects />
+          <Contact />
+          <Footer />
+        </Suspense>
     </div>
   );
 }

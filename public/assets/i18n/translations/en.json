@@ -1,4 +1,6 @@
 {
-    "hello.label": "Hello",
-    "thankyou.label": "Thank you"
-  }
+  "header__title.label": "Hello, I'm ",
+  "header__title--name.label": "Patryk Stanek",
+  "header__text.label": "I'm Front End Developer based in ",
+  "header__text--city.label": "Wroclaw"
+}

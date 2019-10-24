@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
 
+import "../../i18n";
+import LanguageSelector from "../ChangeLanguage/i18n.changeLanguage";
+
 import "./Menubar.scss";
 
 export class Menubar extends React.Component {
@@ -89,7 +92,7 @@ export class Menubar extends React.Component {
                         </li>
                     </ul>
                     <div className="menubar__language">
-                        EN / PL
+                        <LanguageSelector />
                     </div>
                 </div>
             </nav>
