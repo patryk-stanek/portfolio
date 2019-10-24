@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, animateScroll as scroll} from "react-scroll";
+import { Link } from "react-scroll";
 
 import "./Menubar.scss";
 
@@ -8,8 +8,6 @@ export class Menubar extends React.Component {
         super(props);
 
         this.state = {
-            top: 0,
-            bgc: "transparent",
             class: "menubar"
         }
     }

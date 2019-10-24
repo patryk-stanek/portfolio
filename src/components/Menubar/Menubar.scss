@@ -60,10 +60,9 @@
 
     }
 
-    &__link,
-    &__link:link,
-    &__link:visited {
+    &__link {
         @include transition;
+        cursor: pointer;
         text-decoration: none;
         color: $color-white;
         border-bottom: 1px solid transparent;
