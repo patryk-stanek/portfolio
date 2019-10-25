@@ -1,0 +1,24 @@
+@import "../../styles.scss";
+
+.language-selector {
+    
+    &__label {
+        cursor: pointer;
+        
+        &:first-of-type {
+            margin-right: 5px;
+        }
+    }
+
+    &__input {
+        display: none;
+    }
+
+    &__span {
+        font-size: 16px;
+    }
+
+    &__input:checked + &__span {
+        font-weight: 700;
+    }
+}

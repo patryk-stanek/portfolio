@@ -2,5 +2,45 @@
   "header__title.label": "Hello, I'm ",
   "header__title--name.label": "Patryk Stanek",
   "header__text.label": "I'm Front End Developer based in ",
-  "header__text--city.label": "Wroclaw"
+  "header__text--city.label": "Wroclaw",
+
+  "about__heading.label": "About me",
+  "about__span.label": "Front End Developer",
+  "about__paragraph--1.label": "EN Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+  "about__paragraph--2.label": "EN It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "about__button.label": "Download CV",
+
+  "skills__description.label": "Services",
+  "skills__heading.label": "What I can do",
+  "skills__title--webd.label": "Web Development",
+  "skills__title--spa.label": "Single Page Application",
+  "skills__title--rdw.label": "Responsive Design",
+  "skills__text--webd.label": "EN Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+  "skills__text--spa.label": "EN Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+  "skills__text--rdw.label": "EN Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+
+  "projects__description.label": "Portfolio",
+  "projects__heading.label": "Work I have done",
+  "projects__option--all.label": "All",
+  "projects__option--webd.label": "Web Design",
+  "projects__option--app.label": "Applications",
+  "projects__title.label": "Projects's name",
+  "projects__type--webd.label": "Web Design",
+  "projects__type--app.label": "Application",
+  "projects__button.label": "Visit",
+
+  "contact__description.label": "Contact",
+  "contact__heading.label": "Get in touch",
+  "contact__input--name.label": "Your name",
+  "contact__input--email.label": "Your email",
+  "contact__input--msg.label": "Your message",
+  "contact__button.label": "Send message",
+
+  "footer__text.label": "All rights reserved. Patryk Stanek, 2019.",
+
+  "menubar__item--home.label": "Home",
+  "menubar__item--about.label": "About",
+  "menubar__item--services.label": "Services",
+  "menubar__item--portfolio.label": "Portfolio",
+  "menubar__item--contact.label": "Contact"
 }

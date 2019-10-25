@@ -1,6 +1,8 @@
 import React from "react";
 
-import "./Footer.scss"
+import "./Footer.scss";
+
+import FooterComponent from "./Footer.component";
 
 export class Footer extends React.Component {
     render() {
@@ -8,9 +10,7 @@ export class Footer extends React.Component {
             <footer className="footer">
                 <div className="footer__background-image">
                     <div className="footer__background-content">
-                        <div className="footer__container">
-                            <span className="footer__text">All rights reserved. Patryk Stanek, 2019.</span>
-                        </div>
+                        <FooterComponent />
                     </div>
                 </div>
             </footer>
