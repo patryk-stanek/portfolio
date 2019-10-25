@@ -1,5 +1,7 @@
 import React from "react";
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
+
+import { DownloadFile } from "../DownloadFile/DownloadFile.container";
 
 const AboutComponent = () => {
     const { t } = useTranslation()
@@ -18,11 +20,7 @@ const AboutComponent = () => {
             <p className="about__paragraph">
                 {t('about__paragraph--2.label')}
             </p>
-            <button
-                className="about__button"
-            >
-                {t('about__button.label')}
-            </button>
+            <DownloadFile />
         </div>
     )
 }
