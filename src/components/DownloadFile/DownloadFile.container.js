@@ -10,7 +10,7 @@ export class DownloadFile extends React.Component {
     }
 
     downloadFile = () => {
-        fetch("https://portfolio-91ed9.firebaseapp.com/download")
+        fetch("https://patrykstanek.pl/download")
             .then(response => {
                 response.blob().then(blob => {
                     let url = window.URL.createObjectURL(blob);
