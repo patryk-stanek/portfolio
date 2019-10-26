@@ -5,10 +5,7 @@ import "./DownloadFile.scss";
 import DownloadFileComponent from "./DownloadFile.component";
 
 export class DownloadFile extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
+    
     downloadFile = () => {
         fetch("https://patrykstanek.pl/download")
             .then(response => {

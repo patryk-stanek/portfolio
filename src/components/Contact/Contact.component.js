@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from 'react-i18next'
 
-const ContactComponent = () => {
+const ContactComponent = (props) => {
     const { t } = useTranslation()
 
     return (
@@ -15,6 +15,7 @@ const ContactComponent = () => {
             <div className="contact__box">
                 <form
                     className="contact__form"
+                    onSubmit={props.send}
                 >
                     <div className="contact__line">
                         <input 
@@ -24,6 +25,8 @@ const ContactComponent = () => {
                             placeholder={t('contact__input--name.label')}
                             minLength="3"
                             required
+                            onChange={props.input}
+                            value={props.name}
                         />
                         <input 
                             className="contact__input contact__input--half"
@@ -32,6 +35,8 @@ const ContactComponent = () => {
                             placeholder={t('contact__input--email.label')}
                             minLength="3"
                             required
+                            onChange={props.input}
+                            value={props.email}
                         />
                     </div>
                     <textarea
@@ -39,6 +44,10 @@ const ContactComponent = () => {
                         id="message"
                         placeholder={t('contact__input--msg.label')}
                         rows="10"
+                        required
+                        onChange={props.input}
+                        value={props.message}
+                        autoComplete="none"
                     ></textarea>
                     <button
                         className="contact__button"

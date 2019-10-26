@@ -1,0 +1,59 @@
+@import "../../styles.scss";
+
+.modal {
+    font-family: $font-raleway;
+    @include flex-col-center;
+    animation-name: fadeIn;
+    animation-duration: .5s;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color-black, .5);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+
+    &__box {
+        @include flex-col-center;
+        padding: 50px;
+        background-color: $color-white;
+
+        @include respond(break-s) {
+            width: 100%;
+        }
+
+        & span {
+            font-size: 25px;
+            font-weight: 300;
+            margin-bottom: 50px;
+        }
+
+        & button {
+            @include transition;
+            border: 2px solid $color-dark;
+            background-color: $color-dark;
+            color: $color-white;
+            padding: 10px 20px;
+            font-size: 15px;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 200px;
+            font-weight: 700;
+            margin-top: -2px;
+            @include box-shadow;
+            font-family: $font-quicksand;
+        
+            &:hover,
+            &:active {
+                background-color: $color-orange;
+                border: 2px solid $color-orange;
+            }
+        
+            &:active {
+                @include box-shadow-low;
+            }
+        }
+    }
+}

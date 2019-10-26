@@ -94,3 +94,13 @@
         }
     }
 }
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px $color-dark inset;
+    box-shadow: 0 0 0px 1000px $color-dark inset;
+    background-color: transparent;
+    padding: 20px 0;
+    -webkit-text-fill-color: $color-light;
+    margin: 20px 10px;
+    font-size: 16px;
+  }
