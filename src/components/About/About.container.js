@@ -6,7 +6,8 @@ import AboutComponent from "./About.component";
 
 export class About extends React.Component {
     render() {
-        const imageUrl = `../../images/portait.jpg`;
+        const imageUrl = `../../images/about.png`;
+        
         return (
             <section className="about" id="section-about">
                 <div className="about__container">
