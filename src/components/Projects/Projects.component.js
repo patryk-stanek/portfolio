@@ -4,9 +4,9 @@ import { useTranslation } from 'react-i18next'
 const ProjectsComponent = () => {
     const { t } = useTranslation();
     
-    const imageUrlA = `../../images/portfolio1.jpg`;
-    const imageUrlB = `../../images/portfolio2.jpg`;
-    const imageUrlC = `../../images/portfolio3.jpg`;
+    const imageUrlA = `../../assets/images/projects/p-awax.jpg`;
+    const imageUrlB = `../../assets/images/projects/p-vstore.jpg`;
+    const imageUrlC = `../../assets/images/projects/p-bandapp.jpg`;
 
     return (
         <div className="projects__container">

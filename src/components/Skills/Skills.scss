@@ -10,7 +10,7 @@
     &__wrap {
         @include clip-down-up;
         height: 105vh;
-        background-image: linear-gradient(to bottom right, rgba($color-orange, .8), rgba($color-red, .75)), url("../../assets/images/hero-4.jpg");
+        background-image: linear-gradient(to bottom right, rgba($color-orange, .8), rgba($color-red, .75)), url("../../assets/images/bg-middle.jpg");
         background-size: cover;
     }
 

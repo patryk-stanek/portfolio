@@ -9,7 +9,8 @@
     &__background {
         @include clip-down;
         height: 95vh;
-        background-image: linear-gradient(to bottom right, rgba($color-dark, 1), rgba($color-dark, .75)), url("../../assets/images/hero.png");
+        // background-image: linear-gradient(to bottom right, rgba($color-dark, 1), rgba($color-dark, .75)), url("../../assets/images/hero.jpg");
+        background-image: linear-gradient(to bottom right, rgba($color-dark, 1), rgba($color-dark, .75)), url("../../assets/images/bg-header.jpg");
         animation: Gradient 45s ease-in-out infinite;
         z-index: 20;
         position: relative;
