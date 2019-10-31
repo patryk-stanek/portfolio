@@ -1,0 +1,67 @@
+[
+    {
+        "id": 8,
+        "name": "vstore",
+        "title": "VinylStore",
+        "type": "app",
+        "url": "https://vstore.web.app",
+        "github": "https://github.com/patryk-stanek/kodilla-33-final"
+    },
+    {
+        "id": 7,
+        "name": "awax",
+        "title": "Awax (Kodilla)",
+        "type": "webd",
+        "url": "https://patryk-stanek.github.io/awax/",
+        "github": "https://github.com/patryk-stanek/awax"
+    },
+    {
+        "id": 6,
+        "name": "golden",
+        "title": "Golden (Kodilla)",
+        "type": "webd",
+        "url": "https://patryk-stanek.github.io/golden/",
+        "github": "https://github.com/patryk-stanek/golden"
+    },
+    {
+        "id": 5,
+        "name": "bandapp",
+        "title": "BandApp",
+        "type": "webd",
+        "url": "https://patryk-stanek.github.io/bandapp/",
+        "github": "https://github.com/patryk-stanek/bandapp"
+    },
+    {
+        "id": 4,
+        "name": "mache",
+        "title": "Mache (Kodilla)",
+        "type": "webd",
+        "url": "https://patryk-stanek.github.io/mache/",
+        "github": "https://github.com/patryk-stanek/mache"
+    },
+
+    {
+        "id": 3,
+        "name": "natours",
+        "title": "Natours (Udemy)",
+        "type": "webd",
+        "url": "https://patryk-stanek.github.io/udemy-natours/",
+        "github": "https://github.com/patryk-stanek/udemy-natours"
+    },
+    {
+        "id": 2,
+        "name": "nexter",
+        "title": "Nexter (Udemy)",
+        "type": "webd",
+        "url": "https://patryk-stanek.github.io/nexter-udemy/",
+        "github": "https://github.com/patryk-stanek/nexter-udemy"
+    },
+    {
+        "id": 1,
+        "name": "trillo",
+        "title": "Trillo (Udemy)",
+        "type": "webd",
+        "url": "https://patryk-stanek.github.io/trillo-udemy/",
+        "github": "https://github.com/patryk-stanek/trillo-udemy"
+    }
+]
