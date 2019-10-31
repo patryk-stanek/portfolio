@@ -21,7 +21,7 @@ export default function projectsReducer(state = initialState, action) {
     switch (action.type) {
         case GET_PROJECTS:
             //Getting objects array from database file
-            return Object.assign({}, state, {visibleProjects: state.projects})
+            return Object.assign({}, state, {visibleProjects: projectsData})
 
         case SET_CATEGORY:
             //Filter objects in database array by chosen category

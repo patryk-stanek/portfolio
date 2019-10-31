@@ -3,27 +3,35 @@ import { connect } from "react-redux";
 
 import "./Projects.scss";
 
+import { getProjects } from "./Projects.actions";
+
 import ProjectsComponent from "./Projects.component";
 
 class Projects extends React.Component {
+
+    componentDidMount() {
+        this.props.getProjects();
+    }
+
+    handleUpdate() {
+        this.forceUpdate();
+    }
     
     render() {
-        if (this.props.projects !== undefined) {
-            return (
-                <section className="projects" id="section-portfolio">
-                    <ProjectsComponent projects={this.props.projects}/>
-                </section>
-            )
-        } else {
-            return(
-                <span>Loading...</span>
-            )
-        }
+        return (
+            <section className="projects" id="section-portfolio">
+                <ProjectsComponent projects={this.props.visibleProjects} update={this.handleUpdate.bind(this)} />
+            </section>
+        )
     }
 }
 
 const mapStateToProps = store => ({
-    projects: store.projectsReducer.projects
+    visibleProjects: store.projectsReducer.visibleProjects
 });
 
-export default connect(mapStateToProps)(Projects);
+const mapDispatchToProps = dispatch => ({
+    getProjects: () => dispatch(getProjects())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Projects);

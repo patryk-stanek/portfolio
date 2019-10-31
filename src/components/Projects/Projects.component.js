@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import Project from "./Project";
 
+import SortingProjects from "../SortingProjects/SortingProjects";
+
 const ProjectsComponent = props => {
     const { t } = useTranslation();
 
@@ -15,6 +17,12 @@ const ProjectsComponent = props => {
                 {t('projects__heading.label')}
             </h2>
             <div className="projects__box">
+                <SortingProjects 
+                    onChange={props.update}
+                    textOptionAll={t('projects__option--all.label')}
+                    textOptionWebD={t('projects__option--webd.label')}
+                    textOptionApp={t('projects__option--app.label')}
+                    />
                 <div className="projects__portfolio">
                     {props.projects.map(project => {
                             return (
