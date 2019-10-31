@@ -12,7 +12,7 @@ import projectsData from "../../assets/utils/projects.json";
 const initialState = {
     projects: projectsData,
     visibleProjects: [],
-    sortingOption: "" || "viewAll",
+    sortingOption: "" || "all",
     currentPage: "" || 0
 };
 

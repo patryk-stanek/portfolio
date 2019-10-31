@@ -24,4 +24,8 @@
     &:active {
         @include box-shadow-low;
     }
+
+    @include respond(break-m) {
+        margin-top: 15px;
+    }
 }

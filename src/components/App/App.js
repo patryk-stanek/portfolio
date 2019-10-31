@@ -16,7 +16,9 @@ import { Footer } from "../Footer/Footer.container"
 function App() {
   return (
     <Provider store={store}>
-        <Suspense fallback={null}>
+      <div className="App">
+        
+      <Suspense fallback={null}>
           <Menubar />
           <Header />
           <About />
@@ -25,6 +27,7 @@ function App() {
           <Contact />
           <Footer />
         </Suspense>
+      </div>
     </Provider>
   );
 }

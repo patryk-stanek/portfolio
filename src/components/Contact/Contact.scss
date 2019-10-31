@@ -33,6 +33,10 @@
         width: 70%;
         margin: 0 auto;
         @include flex-col;
+
+        @include respond(break-m) {
+            width: 100%;
+        }
     }
 
     &__line {

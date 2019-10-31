@@ -13,7 +13,7 @@ class SortingProjects extends React.Component {
         super(props);
 
         this.state = {
-            selectedOption: ""
+            selectedOption: "" || "all"
         }
 
         this.handleCategory = this.handleCategory.bind(this);

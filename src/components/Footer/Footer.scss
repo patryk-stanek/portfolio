@@ -20,6 +20,10 @@
         background-image: linear-gradient(to bottom right, rgba($color-dark-2, .9), rgba($color-dark-2, .8));
         height: 25vh;
         bottom: 0;
+
+        @include respond(break-m) {
+            height: 35vh;
+        }
     }
 
     &__container {

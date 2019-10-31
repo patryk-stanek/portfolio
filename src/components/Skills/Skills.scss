@@ -3,20 +3,36 @@
 .skills {
     @include clip-down-up;
     filter: drop-shadow(0px 0px 3px rgba(0,0,0,1));
-    height: 106vh;
+    // height: 106vh;
     padding-top: 5px;
     margin-top: -150px;
 
+    @include respond(break-m) {
+        height: 100%;
+    }
+
     &__wrap {
         @include clip-down-up;
-        height: 105vh;
+        // height: 105vh;
         background-image: linear-gradient(to bottom right, rgba($color-orange, .8), rgba($color-red, .75)), url("../../assets/images/bg-middle.jpg");
         background-size: cover;
+
+        @include respond(break-m) {
+            height: 100%;
+        }
     }
 
     &__container {
         @include flex-col-center;
         padding: 200px;
+
+        @include respond(break-xl) {
+            padding: 150px 0;
+        }
+
+        @include respond(break-m) {
+            padding: 100px 0;
+        }
     }
 
     &__description {
@@ -37,6 +53,10 @@
         @include flex-row;
         width: 100%;
         margin-top: 50px;
+
+        @include respond(break-m) {
+            flex-direction: column;
+        }
     }
 
     &__slide {
@@ -46,6 +66,22 @@
         background-color: rgba($color-white, .8);
         padding: 50px 25px;
         margin: 25px;
+
+        @include respond(break-xl) {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        @include respond(break-l) {
+            margin: 15px;
+            padding: 10px;
+            width: auto;
+            margin-bottom: 35px;
+        }
+
+        @include respond(break-m) {
+            padding: 30px;
+        }
 
         &:hover,
         &:active {
@@ -70,10 +106,16 @@
         color: $color-dark;
         text-transform: uppercase;
         margin-bottom: 25px;
+        font-size: 20px;
+
+        @include respond(break-l) {
+            font-size: 16px;
+        }
     }
 
     &__text {
         color: $color-dark;
-        padding: 0 25px;
+        padding: 5px 25px;
+        font-size: 16px;
     }
 }

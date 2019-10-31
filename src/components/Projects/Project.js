@@ -5,7 +5,7 @@ import "../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
 const Project = props => {
     const { t } = useTranslation();
-    const imageUrl = `../../assets/images/projects/p-${props.project.name}.jpg`;
+    const imageUrl = `../../assets/images/projects/p-${props.project.name}.png`;
     const label = props.project.type === "webd" ? t('projects__type--webd.label') : t('projects__type--app.label');
     const bgClass = props.project.type === "webd" ? `projects__content--back-web` : `projects__content--back-app`
 
