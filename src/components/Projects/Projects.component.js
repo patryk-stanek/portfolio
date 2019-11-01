@@ -24,15 +24,39 @@ const ProjectsComponent = props => {
                     textOptionApp={t('projects__option--app.label')}
                     />
                 <div className="projects__portfolio">
-                    {props.projects.map(project => {
+                    {
+                        props.projects.slice(0, props.amount).map(project => {
                             return (
                                 <Project 
                                     project={project}
                                     key={project.id}
                                 />
                             )
-                        })}
+                        })
+                    }
                 </div>
+                    {
+                        props.projects.length >= 3 ? (
+                            <button 
+                                onClick={props.show}
+                                className="projects__button"
+                            >
+                            {
+                                props.amount === 3 ? (
+                                    <span>
+                                        {t('projects__button--more.label')}
+                                    </span>
+                                ) : (
+                                    <span>
+                                        {t('projects__button--less.label')}
+                                    </span>
+                                )
+                            }
+                            </button>
+                        ) : (
+                            <span></span>
+                        )
+                    }
             </div>
         </div>
     )

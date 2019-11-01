@@ -42,6 +42,10 @@
     &__line {
         @include flex-row;
         width: 100%;
+
+        @include respond(break-m) {
+            flex-direction: column;
+        }
     }
 
     &__input {
@@ -61,6 +65,10 @@
 
         &--half {
             width: 50%;
+
+            @include respond(break-m) {
+                width: calc(100% - 20px);
+            }
         }
 
         &--textarea {

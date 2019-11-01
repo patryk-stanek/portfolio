@@ -25,11 +25,11 @@
     },
     {
         "id": 5,
-        "name": "bandapp",
-        "title": "BandApp",
+        "name": "bandy",
+        "title": "Bandy",
         "type": "webd",
-        "url": "https://patryk-stanek.github.io/bandapp/",
-        "github": "https://github.com/patryk-stanek/bandapp"
+        "url": "https://patryk-stanek.github.io/bandy/",
+        "github": "https://github.com/patryk-stanek/bandy"
     },
     {
         "id": 4,

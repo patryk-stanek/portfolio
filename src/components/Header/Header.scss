@@ -18,6 +18,10 @@
     &__container {
         @include container;
         @include flex-col-justify;
+
+        @include respond(break-m) {
+            align-items: center;
+        }
     }
 
     &__box {
@@ -26,7 +30,6 @@
 
         @include respond(break-xl) {
             text-align: center;
-            width: 100%;
         }
     }
 
@@ -73,18 +76,3 @@
         }
     }
 }
-
-.my-node-enter {
-    opacity: 0;
-  }
-  .my-node-enter-active {
-    opacity: 1;
-    transition: opacity 200ms;
-  }
-  .my-node-exit {
-    opacity: 1;
-  }
-  .my-node-exit-active {
-    opacity: 0;
-    transition: opacity 200ms;
-  }

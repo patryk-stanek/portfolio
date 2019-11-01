@@ -41,9 +41,9 @@ export class Menubar extends React.Component {
                 </span>
                 <div className="menubar__navigation">
                     <MenubarComponent />
-                    <div className="menubar__language">
-                        <LanguageSelector />
-                    </div>
+                </div>
+                <div className="menubar__language">
+                    <LanguageSelector />
                 </div>
             </nav>
         )

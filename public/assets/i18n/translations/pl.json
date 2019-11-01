@@ -30,6 +30,8 @@
   "projects__type--webd.label": "Web Design",
   "projects__type--app.label": "Aplikacja",
   "projects__button.label": "Odwiedź",
+  "projects__button--more.label": "Więcej",
+  "projects__button--less.label": "Mniej",
 
   "contact__description.label": "Kontakt",
   "contact__heading.label": "Skontaktuj się",
