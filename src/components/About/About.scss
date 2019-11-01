@@ -5,6 +5,10 @@
     margin-top: -200px;
     background-color: rgba($color-light-2, .5);
 
+    @include respond(break-m) {
+        margin-top: -250px;
+    }
+
     &__container {
         @include container;
         @include flex-row;
@@ -29,6 +33,11 @@
             @include respond(break-m) {
                 margin-right: 0;
                 margin-bottom: 10px;
+                width: 350px;
+                height: 350px;
+                border-radius: 50%;
+                overflow: hidden;
+                @include box-shadow;
             }
         }
     }

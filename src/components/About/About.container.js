@@ -11,13 +11,11 @@ export class About extends React.Component {
             <section className="about" id="section-about">
                 <div className="about__container">
                     <div className="about__box--picture">
-                        <Fade>
                             <img 
-                                className="about__img"
-                                src={imageUrl}
-                                alt="Portrait"
-                            />
-                        </Fade>
+                            className="about__img"
+                            src={imageUrl}
+                            alt="Portrait"
+                        />
                     </div>
                     <div className="about__box--text">
                         <AboutComponent />

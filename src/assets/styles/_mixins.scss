@@ -35,6 +35,8 @@
 
     &:active {
         @include box-shadow-low;
+        background-color: $color-orange;
+        border: 2px solid $color-orange;
     }
 }
 
