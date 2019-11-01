@@ -94,11 +94,13 @@
         font-family: $font-quicksand;
         margin: 20px auto 0;
 
-        &:hover,
-        &:active {
-            background-color: $color-orange;
-            border: 2px solid $color-orange;
-            color: $color-white;
+        @include respond(hover) {
+            &:hover,
+            &:active {
+                background-color: $color-orange;
+                border: 2px solid $color-orange;
+                color: $color-white;
+            }
         }
 
         &:active {

@@ -33,7 +33,7 @@ export class Header extends React.Component {
             <header className="header" id="home">
                 <div 
                     className="header__background" 
-                    // style={{backgroundPositionY: this.state.offset / 2}}
+                    style={{backgroundPositionY: this.state.offset / 2}}
                 >
                     <div className="header__container">
                         <HeaderComponent />

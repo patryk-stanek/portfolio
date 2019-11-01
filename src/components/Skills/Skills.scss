@@ -81,10 +81,12 @@
             padding: 30px;
         }
 
-        &:hover,
-        &:active {
-            transform: scale(1.02);
-            background-color: $color-white;
+        @include respond(hover) {
+            &:hover,
+            &:active {
+                transform: scale(1.02);
+                background-color: $color-white;
+            }
         }
     }
 

@@ -165,27 +165,9 @@
     &__button,
     &__button:link,
     &__button:visited {
-        @include transition;
-        @include box-shadow;
-        border: 2px solid $color-dark;
-        background-color: $color-dark;
-        color: $color-white;
-        padding: 10px 20px;
-        font-size: 15px;
-        text-transform: uppercase;
         text-decoration: none;
         text-align: center;
-        cursor: pointer;
-        width: 150px;
-        font-weight: 700;
-        margin-top: -2px;
-        font-family: $font-quicksand;
-
-        &:hover,
-        &:active {
-            background-color: $color-orange;
-            border: 2px solid $color-orange;
-        }
+        @include main-button
     }
 
     &__button {

@@ -112,30 +112,7 @@
     }
 
     &__button {
-        @include transition;
-        border: 2px solid $color-dark;
-        background-color: $color-dark;
-        color: $color-white;
-        padding: 10px 20px;
-        font-size: 15px;
-        text-transform: uppercase;
-        cursor: pointer;
-        width: 200px;
-        font-weight: 700;
-        margin-top: -2px;
-        @include box-shadow;
-        font-family: $font-quicksand;
-
-        &:hover,
-        &:active {
-            background-color: $color-orange;
-            border: 2px solid $color-orange;
-            // color: $color-dark;
-        }
-
-        &:active {
-            @include box-shadow-low;
-        }
+        @include main-button;
 
         @include respond(break-m) {
             margin-top: 15px;

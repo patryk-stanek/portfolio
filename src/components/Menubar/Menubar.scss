@@ -126,21 +126,27 @@
             bottom: 0;
         }
 
-        &:hover,
-        &:active {
+        @include respond(hover) {
+            &:hover,
+            &:active {
 
-            &::before,
-            &::after {
-                width: 50%;
+                &::before,
+                &::after {
+                    width: 50%;
+
+                    @include respond(break-m) {
+                        width: 0;
+                    }
+                }
 
                 @include respond(break-m) {
-                    width: 0;
+                    font-weight: 500;
                 }
             }
+        }
 
-            @include respond(break-m) {
-                font-weight: 500;
-            }
+        @include respond(break-m) {
+            margin-top: 15px;
         }
     }
 }
