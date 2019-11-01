@@ -1,10 +1,10 @@
 import React from "react";
 import * as emailjs from "emailjs-com";
-
-import "./Contact.scss";
-
+import Zoom from "react-reveal";
 import ContactComponent from "./Contact.component";
 import ModalBox from "../ModalBox/ModalBox";
+import "./Contact.scss";
+
 
 export class Contact extends React.Component {
     constructor(props) {
@@ -72,13 +72,15 @@ export class Contact extends React.Component {
         return (
             <section className="contact" id="section-contact">
                 { modalBoxConfirmation }
-                <ContactComponent 
-                    input={this.handleInputChange.bind(this)}
-                    send={this.handleSendMessage.bind(this)}
-                    name={this.state.name}
-                    email={this.state.email}
-                    message={this.state.message}
-                />
+                <Zoom>
+                    <ContactComponent 
+                        input={this.handleInputChange.bind(this)}
+                        send={this.handleSendMessage.bind(this)}
+                        name={this.state.name}
+                        email={this.state.email}
+                        message={this.state.message}
+                    />
+                </Zoom>
             </section>
         )
     }

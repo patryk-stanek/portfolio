@@ -17,16 +17,15 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        
-      <Suspense fallback={null}>
-          <Menubar />
-          <Header />
-          <About />
-          <Skills />
-          <Projects />
-          <Contact />
-          <Footer />
-        </Suspense>
+        <Suspense fallback={null}>
+            <Menubar />
+            <Header />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+            <Footer />
+          </Suspense>
       </div>
     </Provider>
   );
