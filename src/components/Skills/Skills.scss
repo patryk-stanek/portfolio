@@ -5,6 +5,7 @@
     filter: drop-shadow(0px 0px 3px rgba(0,0,0,1));
     padding-top: 5px;
     margin-top: -150px;
+    padding-bottom: 5px;
 
     @include respond(break-m) {
         height: 100%;
@@ -14,8 +15,10 @@
         @include clip-down-up;
         background-image: linear-gradient(to bottom right, rgba($color-orange, .8), rgba($color-red, .75)), url("../../assets/images/bg-middle.jpg");
         background-size: cover;
+        padding-bottom: 50px;
 
         @include respond(break-m) {
+            padding-bottom: 0;
             height: 100%;
         }
     }
