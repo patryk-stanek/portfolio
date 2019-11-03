@@ -37,4 +37,25 @@
         font-size: 20px;
         font-weight: 100;
     }
+
+    &__link:link,
+    &__link:visited {
+        @include transition;
+        text-decoration: none;
+        color: rgba($color-white, .5);
+
+        
+
+        @include respond(hover) {
+            &:hover,
+            &:active {
+                color: $color-white;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 20px;
+        margin: 10px 5px;
+    }
 }

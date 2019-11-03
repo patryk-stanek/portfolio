@@ -6,10 +6,10 @@
 
   "about__heading.label": "About me",
   "about__span.label": "Front End Developer",
-  "about__paragraph--1.label": "EN Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-  "about__paragraph--2.label": "EN It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  "about__paragraph--1.label": "I'm a young person who's interested in technologies. I love expanding my abilities and verify them in professional environment. Front End Developer function allows me to meet my advancement ambitions. I can finally treat it as my main occupation.",
+  "about__paragraph--2.label": "I've began my adventure with programming with courses on Udemy and continued it with Kodilla's bootcamp.",
 
-  "download.label": "Download CV",
+  "download.label": "Download CV (PL)",
   "modal.label": "Thank You. I will contact You soon!",
 
   "skills__description.label": "Services",
@@ -17,9 +17,9 @@
   "skills__title--webd.label": "Web Development",
   "skills__title--spa.label": "Single Page Application",
   "skills__title--rdw.label": "Responsive Design",
-  "skills__text--webd.label": "EN Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
-  "skills__text--spa.label": "EN Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
-  "skills__text--rdw.label": "EN Lorem Ipsum is simply dummy text of the Lorem has been the industry's standard dummy text ever.",
+  "skills__text--webd.label": "HTML5 and CSS3 are first languages that I've mastered. I use them without major problems and find a lot of satisfaction with creating complicated elements with SCSS preprocessor.",
+  "skills__text--spa.label": "Thanks to learning JS6, React, Redux and Webpack I can create applications with S.A.P model. I approach with enthusiasm and fascination to work with those technologies.",
+  "skills__text--rdw.label": "I'm familiar with Mobile First and Gracefull Degradation concepts and I treat them as natural elements of building modern websites and applications.",
 
   "projects__description.label": "Portfolio",
   "projects__heading.label": "Work I have done",

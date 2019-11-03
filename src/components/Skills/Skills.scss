@@ -64,6 +64,7 @@
         background-color: rgba($color-white, .8);
         padding: 50px 25px;
         margin: 25px;
+        width: 30%;
 
         @include respond(break-xl) {
             width: 100%;

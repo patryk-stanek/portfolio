@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
-import "./App.scss";
-
+import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "../../store";
+import "./App.scss";
 
 //Importing components
 import { Menubar } from "../Menubar/Menubar.container";
@@ -16,17 +16,19 @@ import { Footer } from "../Footer/Footer.container"
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
-        <Suspense fallback={null}>
-            <Menubar />
-            <Header />
-            <About />
-            <Skills />
-            <Projects />
-            <Contact />
-            <Footer />
-          </Suspense>
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <Suspense fallback={null}>
+              <Menubar />
+              <Header />
+              <About />
+              <Skills />
+              <Projects />
+              <Contact />
+              <Footer />
+            </Suspense>
+        </div>
+      </BrowserRouter>
     </Provider>
   );
 }

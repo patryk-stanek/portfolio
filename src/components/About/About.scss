@@ -103,6 +103,31 @@
         }
     }
 
+    &__link:link,
+    &__link:visited {
+        @include transition;
+        text-decoration: none;
+        color: rgba($color-dark, .75);
+
+        
+
+        @include respond(hover) {
+            &:hover,
+            &:active {
+                color: $color-dark;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 20px;
+        margin: 0 10px 0 0;
+
+        @include respond(break-m) {
+            margin: 0 5px;
+        }
+    }
+
     &__paragraph {
         font-size: 19px;
 

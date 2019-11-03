@@ -1,6 +1,5 @@
 import React from "react";
 import AboutComponent from "./About.component";
-import Fade from "react-reveal";
 import "./About.scss";
 
 export class About extends React.Component {

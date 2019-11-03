@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import "./DownloadFile.scss";
 
@@ -13,7 +14,7 @@ export class DownloadFile extends React.Component {
                     let url = window.URL.createObjectURL(blob);
                     let a = document.createElement('a');
                     a.href = url;
-                    a.download = "../../images/portfolio1.jpg";
+                    a.download = "../../CV.pdf";
                     a.click();
                 });
             })
@@ -21,12 +22,14 @@ export class DownloadFile extends React.Component {
 
     render() {
         return (
-            <button
+            <Link 
+                to="./assets/CV Patryk Stanek.pdf" 
+                target="_blank" 
+                download
                 className="download"
-                onClick={this.downloadFile}
             >
                 <DownloadFileComponent />
-            </button>
+            </Link>
         )
     }
 }

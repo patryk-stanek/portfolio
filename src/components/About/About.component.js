@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import Zoom from "react-reveal";
 import { DownloadFile } from "../DownloadFile/DownloadFile.container";
+import "../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
 const AboutComponent = () => {
     const { t } = useTranslation()
@@ -21,6 +22,24 @@ const AboutComponent = () => {
                 <p className="about__paragraph">
                     {t('about__paragraph--2.label')}
                 </p>
+                <div className="about__externals">
+                    <a
+                        href="https://github.com/patryk-stanek"
+                        className="about__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i className="fab fa-github about__icon"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/pstanek3/"
+                        className="about__link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i className="fab fa-linkedin-in about__icon"></i>
+                    </a>
+                </div>
                 <DownloadFile />
             </Zoom>
         </div>
