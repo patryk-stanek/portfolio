@@ -4,7 +4,7 @@ import "./About.scss";
 
 export class About extends React.Component {
     render() {
-        const imageUrl = `../../assets/images/portait.jpg`;
+        const imageUrl = `../../assets/images/portrait.jpg`;
         
         return (
             <section className="about" id="section-about">
