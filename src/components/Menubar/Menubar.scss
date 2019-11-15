@@ -48,6 +48,13 @@
             height: 50px;
             line-height: 50px;
         }
+
+        @include respond(break-s) {
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
     }
 
     &__navigation {
@@ -85,6 +92,10 @@
 
         @include respond(break-m) {
             font-size: 14px;
+        }
+
+        @include respond(break-s) {
+            font-size: 12px;
         }
     }
 

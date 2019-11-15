@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "../../store";
 import "./App.scss";
@@ -16,7 +15,6 @@ import { Footer } from "../Footer/Footer.container"
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
         <div className="App">
           <Suspense fallback={null}>
               <Menubar />
@@ -28,7 +26,6 @@ function App() {
               <Footer />
             </Suspense>
         </div>
-      </BrowserRouter>
     </Provider>
   );
 }

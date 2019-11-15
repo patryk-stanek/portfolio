@@ -5,7 +5,7 @@ const FooterComponent = () => {
     const { t } = useTranslation()
 
     return (
-        <div className="footer__container">
+        <div className="footer__container container">
             <span className="footer__text">
                {t('footer__text.label')}
             </span>

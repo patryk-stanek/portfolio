@@ -5,7 +5,7 @@ const ContactComponent = (props) => {
     const { t } = useTranslation()
 
     return (
-        <div className="contact__container">
+        <div className="contact__container container">
             <h3 className="contact__description">
                 {t('contact__description.label')}
             </h3>

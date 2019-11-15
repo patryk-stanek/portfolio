@@ -6,8 +6,8 @@
     margin-top: -100px;
 
     &__container {
-        @include container;
         margin-top: 50px;
+        padding-top: 50px;
     }
 
     &__description {
@@ -22,6 +22,14 @@
         font-size: 50px;
         font-weight: 100;
         text-align: center;
+
+        @include respond(break-xl) {
+            font-size: 45px;
+        }
+
+        @include respond(break-l) {
+            font-size: 40px;
+        }
     }
 
     &__box {
@@ -70,16 +78,19 @@
         position: relative;
         perspective: 1500px;
         height: 300px;
-        width: calc(100% / 3);
         width: 370px;
 
         @include respond(break-l) {
-            width: calc(100% / 2);
             width: 370px;
         }
 
         @include respond(break-m) {
             width: 370px;
+        }
+
+        @include respond(break-s) {
+            width: 300px;
+            height: 250px;
         }
     }
 
@@ -94,6 +105,10 @@
         backface-visibility: hidden;
         overflow: hidden;
         padding: 10px;
+
+        @include respond(break-s) {
+            height: 250px;
+        }
 
         &--front {
             z-index: 200;
@@ -133,6 +148,10 @@
             &-web {
                 background-image: linear-gradient(to right bottom, $color-orange, $color-orange-2)
             }
+        }
+
+        @include respond(break-s) {
+            height: 250px;
         }
     }
 

@@ -8,7 +8,7 @@ export class About extends React.Component {
         
         return (
             <section className="about" id="section-about">
-                <div className="about__container">
+                <div className="about__container container">
                     <div className="about__box--picture">
                             <img 
                             className="about__img"

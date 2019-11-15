@@ -17,8 +17,8 @@
     }
 
     &__container {
-        @include container;
         @include flex-col-justify;
+        padding: 0 10px;
 
         @include respond(break-m) {
             align-items: center;
@@ -27,10 +27,14 @@
 
     &__box {
         color: $color-white;
-        position: absolute;
 
         @include respond(break-xl) {
             text-align: center;
+            margin: 0 auto;
+        }
+
+        @include respond(break-m) {
+            padding-top: 100px;
         }
     }
 
@@ -48,7 +52,7 @@
         }
 
         @include respond(break-m) {
-            font-size: 40px;
+            font-size: 30px;
         }
     }
 
@@ -56,7 +60,7 @@
         color: $color-orange;
 
         @include respond(break-m) {
-            font-size: 60px;
+            font-size: 40px;
             display: block;
             margin-bottom: 10px;
         }

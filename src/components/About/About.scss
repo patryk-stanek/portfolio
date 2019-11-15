@@ -10,7 +10,6 @@
     }
 
     &__container {
-        @include container;
         @include flex-row;
         padding-top: 200px;
         padding-bottom: 200px;
@@ -38,6 +37,11 @@
                 border-radius: 50%;
                 overflow: hidden;
                 @include box-shadow;
+            }
+
+            @include respond(break-s) {
+                width: 200px;
+                height: 200px;
             }
         }
     }

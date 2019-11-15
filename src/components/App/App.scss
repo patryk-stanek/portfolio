@@ -2,4 +2,5 @@
 
 .App {
     @include box-shadow;
+    overflow-y: hidden;
 }

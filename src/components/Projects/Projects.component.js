@@ -9,7 +9,7 @@ const ProjectsComponent = props => {
     const { t } = useTranslation();
 
     return (
-        <div className="projects__container">
+        <div className="projects__container container">
             <Zoom>
                 <h3 className="projects__description">
                     {t('projects__description.label')}

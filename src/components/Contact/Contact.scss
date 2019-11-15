@@ -6,7 +6,6 @@
     padding: 100px 0 250px;
 
     &__container {
-        @include container;
         text-align: center;
         color: $color-white;
     }
@@ -23,6 +22,14 @@
         font-size: 50px;
         font-weight: 100;
         text-align: center;
+
+        @include respond(break-xl) {
+            font-size: 45px;
+        }
+
+        @include respond(break-l) {
+            font-size: 40px;
+        }
     }
 
     &__box {

@@ -1,24 +1,25 @@
 @import "../../styles.scss";
 
 .language-selector {
-    
-    &__label {
-        cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+
+    & button {
+        border: none;
+        background: transparent;
         
         &:first-of-type {
             margin-right: 5px;
+
+            @include respond(break-s) {
+                margin-right: 2px;
+            }
         }
     }
 
-    &__input {
-        display: none;
-    }
-
-    &__span {
-        font-size: 16px;
-    }
-
-    &__input:checked + &__span {
-        font-weight: 700;
+    & img {
+        width: 25px;
+        height: auto;
+        margin-bottom: -5px;
     }
 }
