@@ -5,25 +5,10 @@ import "./DownloadFile.scss";
 
 import DownloadFileComponent from "./DownloadFile.component";
 
-export class DownloadFile extends React.Component {
-    
-    downloadFile = () => {
-        fetch("https://patrykstanek.pl/download")
-            .then(response => {
-                response.blob().then(blob => {
-                    let url = window.URL.createObjectURL(blob);
-                    let a = document.createElement('a');
-                    a.href = url;
-                    a.download = "../../CV.pdf";
-                    a.click();
-                });
-            })
-    }
-
-    render() {
+export class DownloadFile extends React.Component {render() {
         return (
             <Link 
-                to="./assets/CV Patryk Stanek.pdf" 
+                to="./assets/Patryk Stanek CV.pdf" 
                 target="_blank" 
                 download
                 className="download"
