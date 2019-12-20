@@ -1,6 +1,6 @@
 [
     {
-        "id": 8,
+        "id": 9,
         "name": "vstore",
         "title": "VinylStore",
         "type": "app",
@@ -8,7 +8,7 @@
         "github": "https://github.com/patryk-stanek/kodilla-33-final"
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "awax",
         "title": "Awax (Kodilla)",
         "type": "webd",
@@ -16,12 +16,20 @@
         "github": "https://github.com/patryk-stanek/awax"
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "golden",
         "title": "Golden (Kodilla)",
         "type": "webd",
         "url": "https://patryk-stanek.github.io/golden/",
         "github": "https://github.com/patryk-stanek/golden"
+    },
+    {
+        "id": 6,
+        "name": "sudq",
+        "title": "SUDQ (Kodilla)",
+        "type": "app",
+        "url": "https://cssudq.web.app/",
+        "github": "https://github.com/patryk-stanek/sudq"
     },
     {
         "id": 5,
