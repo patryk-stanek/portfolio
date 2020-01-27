@@ -14,31 +14,6 @@ const LanguageSelector = () => {
   const flagEN = "../../assets/flags/en.png";
 
   return (
-    // <div onChange={changeLanguage} className="language-selector">
-    //   <label className="language-selector__label">
-    //     <input 
-    //       type="radio" 
-    //       value="pl" 
-    //       name="language" 
-    //       // defaultChecked 
-    //       className="language-selector__input"
-    //     />
-    //     <span className="language-selector__span">
-    //       PL
-    //     </span>
-    //   </label>
-    //   <label className="language-selector__label">
-    //     <input 
-    //       type="radio" 
-    //       value="en" 
-    //       name="language" 
-    //       className="language-selector__input"
-    //     />
-    //     <span className="language-selector__span">
-    //       EN
-    //     </span>
-    //   </label>
-    // </div>
     <div className="language-selector">
       <button onClick={() => changeLanguage("pl")}>
         <img 

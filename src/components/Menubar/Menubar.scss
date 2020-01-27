@@ -102,6 +102,9 @@
     &__item {
         padding: 0 5px;
 
+        @include respond(break-xs) {
+            padding: 0 4px;
+        }
     }
 
     &__link {
