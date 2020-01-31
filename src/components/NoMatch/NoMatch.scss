@@ -1,0 +1,13 @@
+@import "../../styles.scss";
+
+.no-match {
+    @include flex-col-center;
+    text-align: center;
+    height: 100vh;
+
+    & * {
+        font-weight: 100;
+        color: $color-orange;
+        font-size: 75px;
+    }
+}

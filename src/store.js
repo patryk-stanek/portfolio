@@ -8,8 +8,8 @@ import reducers from "./reducers";
 const store = createStore(reducers);
 
 //Logging state of the store to console
-store.subscribe(() => console.log(store.getState()));
+// store.subscribe(() => console.log(store.getState()));
 
-console.log(store.getState());
+// console.log(store.getState());
 
 export default store;

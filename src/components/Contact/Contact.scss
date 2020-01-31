@@ -1,127 +1,144 @@
 @import "../../styles.scss";
 
 .contact {
-    @include box-shadow-up;
-    background-color: $color-dark;
-    padding: 100px 0 250px;
 
     &__container {
-        text-align: center;
-        color: $color-white;
-    }
-
-    &__description {
-        font-family: $font-raleway;
-        font-size: 25px;
-        font-weight: 100;
-        text-align: center;
-    }
-
-    &__heading {
-        font-family: $font-raleway;
-        font-size: 50px;
-        font-weight: 100;
-        text-align: center;
-
-        @include respond(break-xl) {
-            font-size: 45px;
-        }
-
-        @include respond(break-l) {
-            font-size: 40px;
-        }
+        @include flex-col-center;
     }
 
     &__box {
         margin-top: 50px;
+        width: 75%;
+        width: 100%;
     }
 
     &__form {
-        width: 70%;
-        margin: 0 auto;
         @include flex-col;
-
-        @include respond(break-m) {
-            width: 100%;
-        }
+        width: 100%;
+        margin: 0 auto;
     }
 
     &__line {
         @include flex-row;
         width: 100%;
 
-        @include respond(break-m) {
+        @include respond(break-l) {
             flex-direction: column;
         }
     }
 
-    &__input {
-        border: none;
-        border-bottom: 1px solid $color-light-2;
-        background-color: transparent;
-        padding: 20px 0;
-        color: $color-light;
-        margin: 20px 10px;
-        font-size: 16px;
+    &__half {
+        width: 100%;
+        margin-bottom: 50px;
+        
+        &:first-child {
+            margin-right: 25px;
 
-        &::placeholder {
-            font-size: 16px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgba($color-white, .3);
+            @include respond(break-l) {
+                margin-right: 0;
+            }
         }
 
-        &--half {
-            width: 50%;
+        &:last-child {
+            margin-left: 25px;
 
-            @include respond(break-m) {
-                width: calc(100% - 20px);
+            @include respond(break-l) {
+                margin-left: 0;
             }
+        }
+    }
+
+    &__label {
+        font-weight: 100;
+        font-size: 30px;
+        color: $color-orange;
+        font-family: $font-quicksand;
+        border-bottom: 1px solid $color-orange;
+        padding-left: 50px;
+        padding-bottom: 20px;
+        display: inline-block;
+    }
+
+    &__input {
+        border: none;
+        width: 100%;
+        border-bottom: 1px solid $color-orange;
+        border-left: 1px solid $color-orange;
+        background-color: transparent;
+        padding: 50px;
+        color: $color-white;
+        font-size: 20px;
+        font-weight: 300;
+
+        &::placeholder {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-family: $font-raleway;
         }
 
         &--textarea {
             resize: none;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
+            font-family: $font-raleway;
+            font-size: 20px;
+        }
+
+        @include respond(break-s) {
+            padding: 20px;
         }
     }
 
-    &__button {
-        @include transition;
-        border: 2px solid $color-white;
-        background-color: $color-white;
-        color: $color-dark;
-        padding: 10px 20px;
-        font-size: 15px;
-        text-transform: uppercase;
-        cursor: pointer;
-        width: 200px;
-        font-weight: 700;
-        margin-top: -2px;
-        @include box-shadow;
-        font-family: $font-quicksand;
-        margin: 20px auto 0;
+    &__btn-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
 
-        @include respond(hover) {
-            &:hover,
-            &:active {
-                background-color: $color-orange;
-                border: 2px solid $color-orange;
-                color: $color-white;
-            }
+    &__info {
+        font-family: $font-raleway;
+        display: none;
+        font-size: 20px;
+        position: absolute;
+        top: -55%;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $color-sky-2;
+
+        &--on {
+            display: block;
         }
 
-        &:active {
-            @include box-shadow-low;
+        @include respond(break-m) {
+            font-size: 18px;
+            text-align: center;
+        }
+
+        @include respond(break-s) {
+            font-size: 14px;
+            top: -65%;
         }
     }
 }
 
 input:-webkit-autofill {
+    font-family: $font-raleway;
     -webkit-box-shadow: 0 0 0px 1000px $color-dark inset;
     box-shadow: 0 0 0px 1000px $color-dark inset;
     background-color: transparent;
-    padding: 20px 0;
     -webkit-text-fill-color: $color-light;
-    margin: 20px 10px;
-    font-size: 16px;
+    padding: 50px;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid $color-orange;
+    border-left: 1px solid $color-orange;
+    background-color: transparent;
+    padding: 50px;
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 300;
+
+    @include respond(break-s) {
+        padding: 20px;
+    }
   }

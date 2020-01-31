@@ -19,11 +19,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  padding: 35px;
-
-  @include respond(break-xl) {
-    padding: 0;
-  }
+  background-color: $color-dark;
+  -webkit-tap-highlight-color: transparent;
 }
 
 code {
@@ -31,12 +28,144 @@ code {
     monospace;
 }
 
+//-----LAYOUT
+
 .container {
   width: 100%;
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  // padding: 0 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+
+  @include respond(break-xl) {
+    padding: 5px; 
+  }
+}
+
+.section {
+  padding-top: 250px;
+  padding-bottom: 100px;
+
+  @include respond(break-s) {
+    padding-top: 125px;
+    padding-bottom: 50px;
+  }
+}
+
+.content {
+  margin-top: 50px;
+}
+
+//-----BIG ICON
+
+.icon-head-container {
+  @include box-shadow;
+  background-color: $color-white;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.icon-head {
+  background-image: linear-gradient(to right, $color-orange, $color-red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 125px;
+  width: 200px;
+  height: 200px;
+  line-height: 190px;
+  margin-right: -5px;
+}
+
+//-----TEXT
+
+.box-title-basic {
+  font-weight: 100;
+  font-size: 30px;
+  color: $color-white;
+  color: $color-orange;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  border-bottom: 1px solid $color-orange;
+  display: inline-block;
+  font-family: $font-quicksand;
+  padding-left: 50px;
+
+  @include respond(break-s) {
+    font-size: 25px;
+  }
+}
+
+.box-paragraph-basic {
+  font-family: $font-raleway;
+  border-bottom: 1px solid $color-orange;
+  border-left: 1px solid $color-orange;
+  padding: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  @include respond(break-s) {
+    font-size: 16px;
+    padding: 25px;
+  }
+}
+
+//-----BUTTON
+
+.button-basic,
+.button-basic:link,
+.button-basic:visited {
+  text-decoration: none;
+  @include transition;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  border-bottom: 1px solid $color-orange;
+  background-color: transparent;
+  color: $color-orange;
+  font-family: $font-raleway;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 20px 50px;
+  text-transform: uppercase;
+  display: inline-block !important;
+  z-index: 0;
+  overflow: hidden;
+  backface-visibility: hidden;
+
+  &::after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transform: scaleY(0);
+      transform-origin: bottom;
+      background-color: $color-orange;
+      transition: transform .2s,
+                  width .2s cubic-bezier(1,0,0,1) .2s,
+                  background-color .1s;
+  }
+
+  &:hover,
+  &:active {
+      color: $color-white;
+  }
+
+  &:active {
+      border-bottom: 1px solid $color-red-2;
+  }
+
+  &:hover::after {
+      transform: scale(1);
+  }
+
+  &:active::after {
+      background-color: $color-red-2;
+  }
 }

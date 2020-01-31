@@ -1,60 +1,56 @@
 @import "../../styles.scss";
 
 .footer {
-    @include clip-up;
-    height: 70vh;
-    margin-top: -150px;
+    background-color: $color-orange;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 
-    &__background-image {
-        background-image: linear-gradient(to bottom right, rgba($color-dark, .5), rgba($color-dark, .75)), url("../../assets/images/bg-footer.jpg");
-        background-size: cover;
-        height: 70vh;
+    @include respond(break-s) {
+        padding: 5px 0;
         position: relative;
     }
 
-    &__background-content {
-        @include clip-up;
-        padding-top: 150px;
-        position: absolute;
-        width: 100%;
-        background-image: linear-gradient(to bottom right, rgba($color-dark, .9), rgba($color-dark, .8));
-        height: 25vh;
-        bottom: 0;
-
-        @include respond(break-m) {
-            height: 35vh;
-        }
-    }
-
     &__container {
-        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(break-s) {
+            justify-content: space-around;
+        }
     }
 
     &__text {
-        font-family: $font-raleway;
+        font-size: 20px;
         color: $color-white;
-        font-size: 20px;
-        font-weight: 100;
+        font-family: $font-quicksand;
+        font-weight: 400;
     }
 
-    &__link:link,
-    &__link:visited {
-        @include transition;
+    &__social-box {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    &__social-link:link,
+    &__social-link:visited {
         text-decoration: none;
-        color: rgba($color-white, .5);
-
-        
-
-        @include respond(hover) {
-            &:hover,
-            &:active {
-                color: $color-white;
-            }
-        }
+        display: block;
     }
 
-    &__icon {
+    &__social-icon {
+        @include transition;
+        display: block;
         font-size: 20px;
-        margin: 10px 5px;
+        width: 20px;
+        height: 20px;
+        text-align: right;
+        margin-left: 20px;
+        color: $color-white;
     }
 }

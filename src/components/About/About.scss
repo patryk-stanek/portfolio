@@ -1,159 +1,116 @@
 @import "../../styles.scss";
 
 .about {
-    @include section-padding;
-    margin-top: -200px;
-    background-color: rgba($color-light-2, .5);
-
-    @include respond(break-m) {
-        margin-top: -250px;
-    }
 
     &__container {
-        @include flex-row;
-        padding-top: 200px;
-        padding-bottom: 200px;
-
-        @include respond(break-m) {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-bottom: 100px;
-        }
-    }
-
-    &__box {
-
-        &--picture {
-            position: relative;
-            margin-right: 75px;
-            margin-bottom: -5px;
-
-            @include respond(break-m) {
-                margin-right: 0;
-                margin-bottom: 10px;
-                width: 350px;
-                height: 350px;
-                border-radius: 50%;
-                overflow: hidden;
-                @include box-shadow;
-            }
-
-            @include respond(break-s) {
-                width: 200px;
-                height: 200px;
-            }
-        }
-    }
-
-    &__img {
-        width: 350px;
-        z-index: 10;
-        @include box-shadow;
-
-        @include respond(break-m) {
-            width: 100%;
-        }
-    }
-
-    &__content {
-        font-family: $font-raleway;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
+    }
 
-        @include respond(break-m) {
-            text-align: center;
-            align-items: center;
+    &__text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &:first-child {
+            margin-bottom: 25px;
+        }
+
+        @include respond(break-l) {
+            flex-direction: column;
+            margin-bottom: 0;
         }
     }
 
-    &__heading {
-        font-size: 50px;
+    &__box {
+        flex-basis: 50%;
+        color: $color-white;
+        font-size: 20px;
         font-weight: 100;
-        line-height: 40px;
+        text-align: justify;
 
-        @include respond(break-xl) {
-            font-size: 45px;
+        &:first-child {
+            margin-right: 25px;
+
+            @include respond(break-l) {
+                margin-right: 0;
+            }
         }
 
-        @include respond(break-l) {
-            font-size: 40px;
+        &:last-child {
+            margin-left: 25px;
+
+
+            @include respond(break-l) {
+                margin-left: 0;
+            }
         }
 
-        @include respond(break-m) {
-            margin: 25px 0;
-        }
-    }
+        &--1 {
+            flex-basis: 42%;
+            padding-bottom: 25px;
 
-    &__span {
-        font-size: 25px;
-        font-weight: 300;
-        margin-top: -20px;
-
-        @include respond(break-xl) {
-            font-size: 20px;
+            @include respond(break-l) {
+                margin-top: 0;
+            }
         }
 
-        @include respond(break-l) {
-            font-size: 18px;
+        &--2 {
+            flex-basis: 58%;
+            padding-bottom: 25px;
+
+            @include respond(break-l) {
+                padding-bottom: 25px;
+                margin-top: 25px;
+            }
         }
 
-        @include respond(break-m) {
-            font-size: 20px;
-            margin-top: 0;
-            margin-bottom: 20px;
+        &--3 {
+            flex-basis: 60%;
+
+            @include respond(break-xl) {
+                flex-basis: 55%;
+            }
+
+            @include respond(break-l) {
+                padding-bottom: 25px;
+            }
         }
-    }
 
-    &__link:link,
-    &__link:visited {
-        @include transition;
-        text-decoration: none;
-        color: rgba($color-dark, .75);
+        &--4 {
+            flex-basis: 40%;
 
-        
+            @include respond(break-xl) {
+                flex-basis: 45%;
+            }
 
-        @include respond(hover) {
-            &:hover,
-            &:active {
-                color: $color-dark;
+            @include respond(break-l) {
+                margin-top: 25px;
             }
         }
     }
 
-    &__icon {
-        font-size: 20px;
-        margin: 0 10px 0 0;
-
-        @include respond(break-m) {
-            margin: 0 5px;
-        }
+    &__list {
+        list-style: none;
     }
 
-    &__paragraph {
-        font-size: 19px;
+    &__item {
 
-        @include respond(break-xl) {
-            font-size: 17px
-        }
+        &:before {
+            content: "";
+            background-color: $color-orange;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+            display: inline-block;
+            margin-right: 10px;
 
-        @include respond(break-l) {
-            font-size: 15px;
-        }
-
-        @include respond(break-m) {
-            font-size: 16px;
-            margin: 0 20px 20px;
-        }
-    }
-
-    &__button {
-        @include main-button;
-
-        @include respond(break-m) {
-            margin-top: 15px;
+            @include respond(break-s) {
+              margin-bottom: 4px;
+            }
         }
     }
 }

@@ -1,166 +1,410 @@
 @import "../../styles.scss";
 
+$menu-items: 5;
+$menu-items-loop-offset: $menu-items - 1;
+$width: (100/$menu-items) * 1%;
+
 .menubar {
     @include transition;
     z-index: 1000;
     position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: calc(100% - 70px);
-    top: 70px;
-    font-weight: 100;
-    padding: 5px 150px;
+    width: 100%;
+    top: 0;
     background-color: transparent;
 
     @include respond(break-xl) {
-      width: 100%;
-      padding: 5px 50px;
-      top: 50px;
+        padding: 0 5px;
     }
 
-    @include respond(break-l) {
-        padding: 5px;
-        top: 0px
+    @include respond(break-s) {
+        background-color: $color-orange;
     }
 
-    &__bg {
+    &__bg-low {
         @include box-shadow;
-        top: 0;
-        background-color: rgba($color-orange, .9);
+        background-color: $color-orange;
+        padding-top: 0;
     }
 
-    &__logo {
-        font-family: $font-logo;
-        font-size: 25px;
-        text-align: center;
-        display: block;
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        color: $color-white;
-        border: 1px solid $color-white;
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        @include respond(break-s) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__bg-low &__wrap {
+        transform-origin: top;
+        transform: scaleY(0);
+        height: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+
+        @include respond(break-s) {
+            transform: none;
+            height: auto;
+            padding-bottom: 5px;
+        }
+    }
+
+    &__wrap {
+        @include transition;
+        display: flex;
+        border-bottom: 1px solid $color-orange;
+        padding-bottom: 15px;
+        margin-top: 20px;
+        flex-direction: row;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        &--low {
+            display: none;
+        }
 
         @include respond(break-m) {
-            font-size: 20px;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
+            margin-top: 15px;
         }
 
         @include respond(break-s) {
-            font-size: 20px;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
+            margin-top: 0;
+            padding-bottom: 5px;
         }
     }
 
-    &__navigation {
-        @include flex-row-align;
-        width: 80%;
+    &__header-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+
+        @include respond(break-m) {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+        }
+
+        @include respond(break-s) {
+            align-items: flex-start;
+            z-index: 15000;
+            overflow: hidden;
+            backface-visibility: hidden;
+        }
+    }
+
+    &__name {
+        color: $color-orange;
+        display: block;
+        font-size: 55px;
+        font-family: $font-quicksand;
+        font-weight: 100;
+
+        @include respond(break-xl) {
+            font-size: 50px;
+        }
+
+        @include respond(break-s) {
+            font-size: 42px;
+            text-align: center;
+            color: $color-dark
+        }
+    }
+
+    &__function {
+        color: $color-white;
+        display: block;
+        font-size: 30px;
+        margin-left: 15px;
+        font-family: $font-quicksand;
+        font-weight: 100;
+
+        &--low {
+            display: none;
+        }
+
+        @include respond(break-xl) {
+            font-size: 25px;
+        }
+
+        @include respond(break-m) {
+            margin-left: 0;
+        }
+
+        @include respond(break-s) {
+            font-size: 15px;
+        }
+    }
+
+    &__color {
+        color: $color-orange;
+        display: inline;
+
+        @include respond(break-s) {
+            color: $color-dark;
+        }
+    }
+
+    &__social-box {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
         justify-content: flex-end;
 
-        @include respond(break-m) {
-            width: auto;
-            justify-content: center;
+        @include respond(break-xl) {
+            margin-right: 5px;
+        }
+
+        @include respond(break-l) {
+            display: none;
         }
     }
 
-    &__language {
-        margin-left: 50px;
+    &__social-link:link,
+    &__social-link:visited {
+        text-decoration: none;
         display: block;
-        color: $color-white;
-        text-align: center;
-        font-size: 16px;
+    }
 
-        @include respond(break-m) {
-            margin-left: 10px;
+    &__social-icon {
+        @include transition;
+        display: block;
+        font-size: 48px;
+        width: 48px;
+        height: 48px;
+        text-align: right;
+        margin-left: 20px;
+        color: $color-white;
+
+        &:hover,
+        &:active {
+            color: $color-orange;
         }
     }
 
-    &__list {
+    &__nav {
         @include transition;
         list-style: none;
         height: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        width: 100%;
+        justify-content: space-between;
         align-items: center;
-        font-size: 16px;
+        font-size: 20px;
+        position: relative;
 
         @include respond(break-m) {
-            font-size: 14px;
+            font-size: 18px;
         }
 
         @include respond(break-s) {
-            font-size: 12px;
-        }
-    }
-
-    &__item {
-        padding: 0 5px;
-
-        @include respond(break-xs) {
-            padding: 0 4px;
+            transform: scaleY(0);
+            transform-origin: top;
+            width: 100%;
+            flex-direction: column;
+            background-color: $color-orange;
+            justify-content: center;
+            z-index: 10000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
         }
     }
 
     &__link {
+        text-decoration: none;
+        color: $color-white;
+        padding: 20px 0;
+        width: $width;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+
+        @include respond(break-s) {
+            margin: 1vh 0;
+        }
+    }
+
+    &__item {
+        width: 100%;
         @include transition;
         cursor: pointer;
         text-decoration: none;
         color: $color-white;
         border-bottom: 1px solid transparent;
         position: relative;
-        padding-bottom: 5px;
+        font-weight: 300;
+        padding: 10px 0;
+        font-family: $font-raleway;
+    }
 
-        &::before {
-            @include transition;
-            content: "";
-            height: 1px;
-            background-color: $color-white;
+    &__link--active &__item {
+
+        @include respond(break-s) {
+            font-weight: 700;
+        }
+    }
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__checkbox:checked ~ &__nav {
+
+        @include respond(break-s) {
+            transform: scaleY(1)
+        }
+    }
+
+    &__button {
+        display: none;
+        height: 26px;
+        width: 26px;
+        cursor: pointer;
+        z-index: 10000;
+        margin-right: 5px;
+
+        @include respond(break-s) {
             display: block;
-            width: 0%;
-            position: absolute;
-            right: 50%;
-            bottom: 0;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        line-height: 5px;
+
+        &,
+        &::before,
+        &::after {
+            width: 30px;
+            height: 3px;
+            background-color: $color-white;
+            display: inline-block;
         }
 
+        &::before,
         &::after {
             @include transition;
             content: "";
-            height: 1px;
-            background-color: $color-white;
-            display: block;
-            width: 0%;
             position: absolute;
-            left: 50%;
-            bottom: 0;
+            left: 0;
         }
 
-        @include respond(hover) {
-            &:hover,
-            &:active {
+        &::before {
+            top: -10px;
+        }
 
-                &::before,
-                &::after {
-                    width: 50%;
+        &::after {
+            top: 10px;
+        }
+    }
 
-                    @include respond(break-m) {
-                        width: 0;
-                    }
-                }
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
 
-                @include respond(break-m) {
-                    font-weight: 500;
-                }
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}
+
+.indicator {
+    position: relative;
+    z-index: 0;
+
+    @include respond(break-s) {
+        position: fixed;
+    }
+  
+    .menubar__link {
+
+        @include respond(break-s) {
+            width: 100% !important;
+        }
+  
+        &:last-child {
+            
+            &:before,
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                pointer-events: none;
+                transition: left .5s ease;
             }
         }
+  
+        &:after {
+            width: $width;
+            padding-top: 5px;
+            border-bottom: 1px solid $color-white;
+            top: 0;
+            bottom: 0px;
+            left: 0;
+            z-index: -1;
 
-        @include respond(break-m) {
-            margin-top: 15px;
+            @include respond(break-s) {
+                border-bottom: none;
+            }
         }
+    }
+}
+
+
+
+.indicator {
+    @for $i from 1 through $menu-items-loop-offset {
+  
+        .menubar__link:nth-child(#{$i}).menubar__link--active ~ .menubar__link:last-child:after {
+            left:($width*$i)-$width;
+        }
+        
+        .menubar__link:nth-child(#{$i}).menubar__link--active ~ .menubar__link:last-child:before {
+            left:($width*$i)+($width/2)-$width;
+        }
+    }
+}
+  
+@for $i from 1 through $menu-items-loop-offset {
+    
+    .menubar__link:nth-child(#{$i}):hover ~ .menubar__link:last-child:after {
+        left:($width*$i)-$width !important;
+    }
+
+    .menubar__link:nth-child(#{$i}):hover ~ .menubar__link:last-child:before{
+        left:($width*$i)+($width/2)-$width !important;
+    }
+}
+  
+.menubar__link {
+  
+    &:last-child {
+      
+        &:hover, &.menubar__link--active {
+
+            &:before {
+                left: (100%-$width)+($width/2) !important;
+            }
+
+            &:after{
+                left: 100%-$width !important;
+            }
+        }        
     }
 }

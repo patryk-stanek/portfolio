@@ -3,7 +3,6 @@
 .modal {
     font-family: $font-raleway;
     @include flex-col-center;
-    animation-name: fadeIn;
     animation-duration: .5s;
     width: 100vw;
     height: 100vh;
@@ -49,10 +48,6 @@
             &:active {
                 background-color: $color-orange;
                 border: 2px solid $color-orange;
-            }
-        
-            &:active {
-                @include box-shadow-low;
             }
         }
     }

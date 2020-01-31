@@ -1,0 +1,55 @@
+@import "../../styles.scss";
+
+.home {
+
+    &__portrait {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        background-image: url(../../assets/images/portrait.jpg);
+        background-size: cover;
+        background-position: top;
+    }
+
+    &__box {
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__heading {
+        font-weight: 100;
+        font-size: 50px;
+        color: $color-orange;
+        font-family: $font-quicksand;
+        border-bottom: 1px solid $color-orange;
+        padding-left: 50px;
+        padding-bottom: 20px;
+        display: inline-block;
+        text-transform: uppercase;
+
+        @include respond(break-s) {
+            font-size: 40px;
+        }
+    }
+
+    &__paragraph {
+        text-transform: initial;
+        line-height: 1.7;
+        font-family: $font-quicksand;
+        border-bottom: 1px solid $color-orange;
+        border-left: 1px solid $color-orange;
+        padding: 50px;
+        font-size: 22px;
+        font-weight: 200;
+        text-align: justify;
+
+        @include respond(break-s) {
+            font-size: 18px;
+            padding: 20px;
+        }
+    }
+}
